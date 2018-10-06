@@ -6,6 +6,7 @@
 - [What you can learn](#what-you-can-learn)
 - [Setup](#setup)
 - [Steps](#steps)
+  - [Basic Components](#basic-components)
   - [Confirugation](#configuration)
   - [Authorization service](#authorization-service)
 
@@ -39,14 +40,19 @@ Then, you should see something like that:
 ![](static/screenshot.png)
 
 ## Steps
+### Basic components
+* ```yarn add filter-react-props classnames```
+
 ### Confirugation
 * Set `API_BASE_URL` variable
 
 ### Authorization service
+* Setup redux-form (reducer)
+* Create signin and signup pages using redux-form
+* Validate fields with ```yarn add redux-form-validators```
 * Create api `register` and `login` functions
-* Create register and login form
 * Create file for `auth` actions with `register` and `login` actions
 * Create `user` reducer and combine that
-* Manage `token`
-* Create `requireAuth` HOC
-* Add protected route
+* Store `token` in cookies ```yarn add cookie-js```
+* Manage cookies on the server side ```yarn add express cookie-parser```
+* Create `Dashboard` page with auth and render `Dashboard` layout

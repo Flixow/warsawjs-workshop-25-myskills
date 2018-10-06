@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { stringify } from 'querystring';
-import localStorage from './localStorage';
+import cookieStorage from './cookieStorage';
 
 
 class Net {
@@ -12,7 +12,7 @@ class Net {
   }
   _getHeaders = () => {
     const headers = this.headers;
-    const token = localStorage.get('token');
+    const token = cookieStorage.get('token');
     if (token) {
       headers.Authorization = `Token ${token}`;
     }
