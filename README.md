@@ -16,6 +16,7 @@
   - [List of questions](#list-of-questions)
   - [Display random questions](#display-random-questions)
   - [Answer question form](#answer-question-form)
+  - [Filter questions](#filter-questions)
 
 ## Features :speedboat:
 * :gem: Authorization service (register/login)
@@ -103,3 +104,6 @@ Then, you should see something like that:
 * Create `AnswerFields` component
 * Create `Checkbox` variation for Input component
 * Create `answer` action
+
+### Filter questions
+* Create selectors to filter questions by level and category

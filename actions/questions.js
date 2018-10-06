@@ -6,6 +6,11 @@ export const setQuestions = payload => ({
   payload,
 });
 
+export const setFilters = payload => ({
+  type: ACTIONS.SET_FILTERS,
+  payload,
+});
+
 export const fetchAll = () => ({
   name: 'questions.fetchAll',
   async: async dispatch => {
