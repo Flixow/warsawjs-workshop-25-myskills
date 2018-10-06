@@ -12,6 +12,7 @@
   - [Auth HOC](#auth-hoc)
   - [Loading state](#loading-state)
   - [Notifications](#notifications)
+  - [Custom redux middleware](#custom-redux-middleware)
 
 ## Features :speedboat:
 * :gem: Authorization service (register/login)
@@ -75,3 +76,10 @@ Then, you should see something like that:
 * Add root element to the _app.js file for inject Portal
 * Render `SystemNotifications` component for `Dashboard` layout
 * Add sample notifications for auth actions
+
+### Custom redux middleware
+* Create middleware with notifications and pending state support
+* Apply middleware to the store
+* Use new api for all already created async actions
+* Connect `pending` reducer managed by middleware and remove old one
+

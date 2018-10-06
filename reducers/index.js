@@ -4,8 +4,9 @@ import { reducer as formReducer } from 'redux-form';
 import clock from './clock';
 
 import user from './user';
-import pending from './pending';
 import notifications from './notifications';
+
+import pending from '../middlewares/async/reducer.pending';
 
 export default combineReducers({
   clock,
