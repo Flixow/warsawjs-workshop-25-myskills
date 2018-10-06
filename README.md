@@ -107,3 +107,4 @@ Then, you should see something like that:
 
 ### Filter questions
 * Create selectors to filter questions by level and category
+* Add buttons to filter questions on `Dashbaord` layout
