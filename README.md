@@ -17,6 +17,7 @@
   - [Display random questions](#display-random-questions)
   - [Answer question form](#answer-question-form)
   - [Filter questions](#filter-questions)
+  - [User profile page](#user-profile-page)
 
 ## Features :speedboat:
 * :gem: Authorization service (register/login)
@@ -108,3 +109,9 @@ Then, you should see something like that:
 ### Filter questions
 * Create selectors to filter questions by level and category
 * Add buttons to filter questions on `Dashbaord` layout
+
+### User profile page
+* Create action to fetch all answers of the user
+* Create `profile` page
+* Use `withAuth` HOC
+* Fetch answers on the `profile` page by `getInitialProps`
