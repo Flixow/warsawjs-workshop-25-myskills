@@ -10,6 +10,7 @@
   - [Confirugation](#configuration)
   - [Authorization service](#authorization-service)
   - [Auth HOC](#auth-hoc)
+  - [Loading state](#loading-state)
 
 ## Features :speedboat:
 * :gem: Authorization service (register/login)
@@ -60,3 +61,9 @@ Then, you should see something like that:
 
 ### Auth HOC
 * Move auth logic from `Dashboard` page to the HOC
+
+### Loading State
+* Create `pending` reducer with actions
+* Create `LoaderIndicator` and `Loading` components
+* Manage pending state in the auth actions
+* Display `Loading` component for the entire application (_app.js)
