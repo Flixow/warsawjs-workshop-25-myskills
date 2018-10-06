@@ -11,6 +11,7 @@
   - [Authorization service](#authorization-service)
   - [Auth HOC](#auth-hoc)
   - [Loading state](#loading-state)
+  - [Notifications](#notifications)
 
 ## Features :speedboat:
 * :gem: Authorization service (register/login)
@@ -67,3 +68,10 @@ Then, you should see something like that:
 * Create `LoaderIndicator` and `Loading` components
 * Manage pending state in the auth actions
 * Display `Loading` component for the entire application (_app.js)
+
+### Notifications
+* Create `notifications` reducer and actions
+* Create `SystemNotifications` component
+* Add root element to the _app.js file for inject Portal
+* Render `SystemNotifications` component for `Dashboard` layout
+* Add sample notifications for auth actions

@@ -23,6 +23,8 @@ class MyApp extends App {
           <Fragment>
             <Loading />
             <Component {...pageProps} />
+
+            <div id="system-notifications-root" />
           </Fragment>
 
         </Provider>

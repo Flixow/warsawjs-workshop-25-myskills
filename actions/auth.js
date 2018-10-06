@@ -1,6 +1,7 @@
 import API from 'utils/api';
 import cookieStorage from 'utils/cookieStorage';
 
+import { pushAutoRemoveNotifications } from './notifications';
 import { setPending, deletePending } from '../reducers/pending';
 
 export const signup = ({ email, password }) => async dispatch => {
@@ -8,6 +9,9 @@ export const signup = ({ email, password }) => async dispatch => {
     dispatch(setPending('auth.signup'));
     const user = await API.auth.register({ email, password });
     cookieStorage.set('token', user.token);
+    dispatch(pushAutoRemoveNotifications({
+      success: 'You have been registered!',
+    }));
   } catch (error) {
     console.log(error);
   } finally {
@@ -21,6 +25,9 @@ export const signin = ({ email, password }) => async dispatch => {
     const [user] = await API.auth.login({ email, password });
     if (user) {
       cookieStorage.set('token', user.token);
+      dispatch(pushAutoRemoveNotifications({
+        success: 'You have been logged in!',
+      }));
     }
   } catch (error) {
     console.log(error);
