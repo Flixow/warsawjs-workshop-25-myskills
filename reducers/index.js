@@ -5,6 +5,7 @@ import clock from './clock';
 
 import user from './user';
 import notifications from './notifications';
+import questions from './questions';
 
 import pending from '../middlewares/async/reducer.pending';
 
@@ -13,6 +14,7 @@ export default combineReducers({
   user,
   pending,
   notifications,
+  questions,
 
   form: formReducer,
 });

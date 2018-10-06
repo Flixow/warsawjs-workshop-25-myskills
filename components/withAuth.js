@@ -5,7 +5,12 @@ import { getUserByToken } from 'actions/user';
 import cookieStorage from 'utils/cookieStorage';
 
 export default () => ComposedComponent => class withAuth extends Component {
-  static async getInitialProps({ req, isServer, store }) {
+  static async getInitialProps(ctx) {
+    const composedInitialProps = ComposedComponent.getInitialProps
+      ? await ComposedComponent.getInitialProps(ctx)
+      : {};
+
+    const { req, isServer, store } = ctx;
     let token;
 
     if (isServer) {
@@ -17,7 +22,7 @@ export default () => ComposedComponent => class withAuth extends Component {
 
     const user = await store.dispatch(getUserByToken({ token }));
 
-    return { user };
+    return { ...composedInitialProps, user };
   }
 
   static defaultProps = {

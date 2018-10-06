@@ -13,6 +13,7 @@
   - [Loading state](#loading-state)
   - [Notifications](#notifications)
   - [Custom redux middleware](#custom-redux-middleware)
+  - [List of questions](#list-of-questions)
 
 ## Features :speedboat:
 * :gem: Authorization service (register/login)
@@ -83,3 +84,7 @@ Then, you should see something like that:
 * Use new api for all already created async actions
 * Connect `pending` reducer managed by middleware and remove old one
 
+### List of questions
+* Create reducer for questions
+* Extend `withAuth` HOC to support custom `getInitialProps`
+* Fetch and display list of questions at `Dashboard` layout

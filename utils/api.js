@@ -35,4 +35,9 @@ export default {
       },
     }),
   },
+  questions: {
+    fetchAll: () => net.get({
+      url: 'questions',
+    }),
+  },
 };
