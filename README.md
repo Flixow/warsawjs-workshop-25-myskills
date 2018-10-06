@@ -9,6 +9,7 @@
   - [Basic Components](#basic-components)
   - [Confirugation](#configuration)
   - [Authorization service](#authorization-service)
+  - [Auth HOC](#auth-hoc)
 
 ## Features :speedboat:
 * :gem: Authorization service (register/login)
@@ -56,3 +57,6 @@ Then, you should see something like that:
 * Store `token` in cookies ```yarn add cookie-js```
 * Manage cookies on the server side ```yarn add express cookie-parser```
 * Create `Dashboard` page with auth and render `Dashboard` layout
+
+### Auth HOC
+* Move auth logic from `Dashboard` page to the HOC
