@@ -1,10 +1,11 @@
-import { PureComponent, Fragment } from 'react';
+import { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'next/router';
 
 import { SystemNotifications } from 'components';
 
 import { fetchAll } from 'actions/questions';
+import { randomQuestionsSelector } from '../selectors';
 
 class Dashboard extends PureComponent {
   componentWillMount() {
@@ -42,8 +43,8 @@ class Dashboard extends PureComponent {
   }
 }
 
-Dashboard =  connect(({ questions }) => ({
-  questions: questions.list,
+Dashboard =  connect(state => ({
+  questions: randomQuestionsSelector(state),
 }), {
   fetchAll,
 })(Dashboard);

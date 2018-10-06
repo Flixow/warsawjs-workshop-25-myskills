@@ -14,6 +14,7 @@
   - [Notifications](#notifications)
   - [Custom redux middleware](#custom-redux-middleware)
   - [List of questions](#list-of-questions)
+  - [Display random questions](#display-random-questions)
 
 ## Features :speedboat:
 * :gem: Authorization service (register/login)
@@ -88,3 +89,8 @@ Then, you should see something like that:
 * Create reducer for questions
 * Extend `withAuth` HOC to support custom `getInitialProps`
 * Fetch and display list of questions at `Dashboard` layout
+
+### Display random questions
+* ```yarn add reselect```
+* Create selector to get random `x` questions
+* Use created selector on Dashboard layout
