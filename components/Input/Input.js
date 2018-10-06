@@ -5,7 +5,7 @@ import cssVariables from 'utils/cssVariables';
 import TextField from './TextField';
 import TextareaField from './TextareaField';
 import PasswordField from './PasswordField';
-// import SelectField from './SelectField';
+import SelectField from './SelectField';
 import RadioListField from './RadioListField';
 import RadioField from './RadioField';
 
@@ -56,8 +56,8 @@ const Input = ({
         return <TextareaField {...childrenProps} />;
       case 'password':
         return <PasswordField {...childrenProps} />;
-      // case 'select':
-      //   return <SelectField {...childrenProps} />;
+      case 'select':
+        return <SelectField {...childrenProps} />;
       case 'radio':
         return <RadioField {...childrenProps} />;
       case 'radio-list':

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import { getUserByToken } from 'actions/user';
+import { getUserByToken, setUser } from 'actions/user';
 
 import cookieStorage from 'utils/cookieStorage';
 
@@ -21,6 +21,7 @@ export default () => ComposedComponent => class withAuth extends Component {
     }
 
     const user = await store.dispatch(getUserByToken({ token }));
+    store.dispatch(setUser(user));
 
     return { ...composedInitialProps, user };
   }

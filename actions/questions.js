@@ -14,3 +14,12 @@ export const fetchAll = () => ({
     dispatch(setQuestions(questions));
   },
 });
+
+export const answerQuestion = ({ questionId, answer }) => ({
+  name: 'questions.answerQuestion',
+  async: async(dispatch, getState) => {
+    const { user } = getState();
+
+    await API.questions.answer({ userId: user.profile.id, questionId, answer });
+  },
+});

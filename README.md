@@ -15,6 +15,7 @@
   - [Custom redux middleware](#custom-redux-middleware)
   - [List of questions](#list-of-questions)
   - [Display random questions](#display-random-questions)
+  - [Answer question form](#answer-question-form)
 
 ## Features :speedboat:
 * :gem: Authorization service (register/login)
@@ -94,3 +95,11 @@ Then, you should see something like that:
 * ```yarn add reselect```
 * Create selector to get random `x` questions
 * Use created selector on Dashboard layout
+
+### Answer question form
+* ```yarn add react-bootstrap```
+* Create `QuestionsList` component
+* Create `QuestionListItem` component
+* Create `AnswerFields` component
+* Create `Checkbox` variation for Input component
+* Create `answer` action

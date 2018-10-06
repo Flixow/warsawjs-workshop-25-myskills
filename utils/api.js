@@ -39,5 +39,13 @@ export default {
     fetchAll: () => net.get({
       url: 'questions',
     }),
+    answer: ({ userId, questionId, answer }) => net.post({
+      url: 'answers',
+      data: {
+        userId,
+        questionId,
+        answer,
+      },
+    }),
   },
 };

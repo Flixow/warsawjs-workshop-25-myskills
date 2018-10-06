@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import cssVariables from 'utils/cssVariables';
 
 const Select = ({
-  standard, className, ['data-e2e']: dataE2E,
+  standard, className,
   input = {}, inputProps, variation, disabled,
   ...other
 }) => {
@@ -48,7 +48,6 @@ const Select = ({
         className
       )}
       name={input.name || name}
-      data-e2e={`${input.name || other.name}__Select__field__wrapper`}
     >
       <SelectName
         multi
@@ -60,7 +59,7 @@ const Select = ({
         {...other}
         onChange={handleOnChange}
         onBlur={() => {}}
-        inputProps={{ 'data-e2e': dataE2E, ...input, ...inputProps }}
+        inputProps={{ ...input, ...inputProps }}
       />
       <style jsx>{`
         .Select :global(.Select-control) {
